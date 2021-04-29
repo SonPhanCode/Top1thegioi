@@ -239,6 +239,7 @@ button:hover {
     transform: translate(-50%, -50%);
     z-index: 10;
     opacity: 0.5;
+    position: fixed;
 }
 
 .hetgio p {
