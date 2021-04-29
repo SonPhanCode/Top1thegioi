@@ -527,12 +527,24 @@ button:hover {
         float: none;
     }
     /* ===== cau hoi==== */
+    /* .cauhoi {
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        margin-top: 650px;
+        float: none;
+        font-size: 15px;
+    }
+    #cauhoi {
+        width: 100%;
+        text-align: center;
+        display: none;
+    } */
     .cauhoi {
         width: 100%;
         height: 50%;
         position: absolute;
-        margin-top: 450px;
-        float: none;
+        bottom: 0;
         font-size: 15px;
     }
     #cauhoi {
