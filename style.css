@@ -84,7 +84,8 @@ button {
 
 /* ===== cau hoi==== */
 
-.cauhoi {
+
+/* .cauhoi {
     width: 30%;
     height: 100%;
     display: block;
@@ -97,8 +98,32 @@ button {
     background: url(bg2.jpg);
     background-size: cover;
     background-position: inherit;
-    /* background-color: rgb(38, 0, 255); */
-    /* border-left: 2px solid rgb(0, 0, 0); */
+}
+
+#cauhoi {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    text-align: center;
+    display: none;
+} */
+
+.cauhoi {
+    width: 30%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    right: 0;
+    float: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 30px;
+    word-wrap: break-word;
+    background: url(bg2.jpg);
+    background-size: cover;
+    background-position: inherit;
 }
 
 #cauhoi {
