@@ -1,0 +1,591 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: rgb(193, 221, 248); */
+    /* background-image: url(gai.jpg); */
+    background-image: url(xetang.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.main {
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+
+.game {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    /* border: 2px solid rgb(119, 210, 252); */
+    float: left;
+    background: url(bg1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+table {
+    float: left;
+    margin-left: 50px;
+    /* background-color: black; */
+}
+
+.left {
+    width: 5%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+td {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    margin-top: 2px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+
+/* ===== cau hoi==== */
+
+.cauhoi {
+    width: 30%;
+    height: 100%;
+    display: block;
+    position: relative;
+    float: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 30px;
+    word-wrap: break-word;
+    background: url(bg2.jpg);
+    background-size: cover;
+    background-position: inherit;
+    /* background-color: rgb(38, 0, 255); */
+    /* border-left: 2px solid rgb(0, 0, 0); */
+}
+
+#cauhoi {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    text-align: center;
+    display: none;
+}
+
+#time {
+    color: black;
+    /* font-size: 300px; */
+    font-size: 900%;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    z-index: 2;
+    text-transform: uppercase;
+    opacity: 0.3;
+    display: none;
+    animation-name: scale;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#time2 {
+    display: none;
+    height: 1%;
+    font-size: 10px;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+    z-index: 5;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+
+button:hover,
+td:hover {
+    transform: scale(1.05);
+    transition: 0.25s;
+}
+
+button:hover {
+    background-color: rgb(253, 226, 184);
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+#input1,
+#input2 {
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+#input1 {
+    width: 25%;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#input2 {
+    width: 7%;
+    height: 50px;
+}
+
+#input1:hover {
+    border: 3px solid rgb(117, 181, 255);
+    transition: all 0.25s;
+    border-radius: 50px;
+}
+
+#input2:hover {
+    border: 3px solid rgb(255, 60, 0);
+    transform: scale(1.15);
+    transition: all 0.25s;
+    border-radius: 50px;
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+}
+
+.hetgio {
+    display: none;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    opacity: 0.5;
+}
+
+.hetgio p {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 150px;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.content {
+    margin-top: 15px;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.anh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 50%;
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    z-index: 1;
+    transition: all 2s;
+}
+
+.anh:before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: inherit;
+    animation: fade 3s infinite linear;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#textshow {
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -0%);
+    font-size: 50px;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.btnimg img {
+    opacity: 0.7;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    animation-name: bacho;
+    animation-duration: 3s;
+    animation-iteration-count: initial;
+    padding: 10px;
+}
+
+.btnimg #btnleft {
+    position: absolute;
+    left: 5%;
+}
+
+.btnimg #btnright {
+    position: absolute;
+    right: 5%;
+}
+
+.btnimg img:hover {
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.inputfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputfile input {
+    width: 30%;
+    margin-top: 15px;
+    font-size: 15px;
+    border-radius: 15px;
+    outline: none;
+    color: white;
+}
+
+.inputfile input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.inputfile input::before {
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    background-color: rgb(243, 243, 243);
+    border-radius: 20px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 15px;
+    width: 120px;
+}
+
+.inputfile input:hover::before {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.25s;
+}
+
+#inputfile1::before {
+    content: 'Chọn tệp đáp án';
+}
+
+#inputfile2::before {
+    content: 'Chọn tệp thứ tự';
+}
+
+#inputfile3::before {
+    content: 'Chọn tệp câu hỏi';
+}
+
+#next {
+    position: absolute;
+    background: none;
+    background-image: url(next.png);
+    background-position: center;
+    background-size: cover;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -2%);
+    display: none;
+}
+
+#next:hover {
+    opacity: 0.7;
+}
+
+@keyframes fade {
+    to {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes scale {
+    0% {
+        /* font-size: 300px; */
+        font-size: 900%;
+    }
+    100% {
+        /* font-size: 400px; */
+        font-size: 1100%;
+    }
+}
+
+
+/* reponsive */
+
+@media screen and (max-width: 768px) {
+    body {
+        /* background-color: rgb(193, 221, 248); */
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    .form {
+        font-size: 15px;
+        margin-top: 2%;
+    }
+    #input1 {
+        font-size: 15px;
+        width: 35%;
+        height: 40px;
+        margin-right: 10px;
+    }
+    #input2 {
+        font-size: 15px;
+        width: 15%;
+        height: 40px;
+    }
+    td {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+    button {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+    /* ===== cau hoi==== */
+    .cauhoi {
+        font-size: 15px;
+    }
+    #time {
+        font-size: 150%;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+    }
+    #time2 {
+        display: none;
+        height: 1%;
+        font-size: 10px;
+        width: 100%;
+        margin: auto;
+        background-color: rgb(0, 0, 0);
+        z-index: 5;
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        transform: translate(-50%, -62%);
+    }
+    .hetgio p {
+        font-size: 100px;
+    }
+    .btnimg img {
+        width: 50px;
+    }
+    .btnimg #btnleft {
+        position: absolute;
+        left: 5%;
+    }
+    .btnimg #btnright {
+        position: absolute;
+        right: 5%;
+    }
+    #textshow {
+        font-size: 30px;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+    }
+    .anh {
+        width: 65%;
+        height: 50%;
+    }
+    .inputfile input {
+        width: 50%;
+        margin-top: 15px;
+        font-size: 15px;
+        border-radius: 15px;
+        outline: none;
+        color: white;
+    }
+    .inputfile input::before {
+        border-radius: 20px;
+        padding: 5px 8px;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 12px;
+        width: 100px;
+        margin-right: -50px;
+    }
+    .btnimg img {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .game {
+        width: 100%;
+        height: 50%;
+        float: none;
+    }
+    /* ===== cau hoi==== */
+    .cauhoi {
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        margin-top: 450px;
+        float: none;
+        font-size: 15px;
+    }
+    #cauhoi {
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+    table {
+        float: left;
+        margin-left: 25px;
+    }
+    td {
+        width: 25px;
+        height: 25px;
+        font-size: 13px;
+    }
+    button {
+        width: 25px;
+        height: 25px;
+        font-size: 13px;
+    }
+    #time {
+        font-size: 50%;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+    }
+    #time2 {
+        display: none;
+        height: 1%;
+        font-size: 10px;
+        width: 100%;
+        margin: auto;
+        background-color: rgb(0, 0, 0);
+        z-index: 5;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+    }
+    .hetgio p {
+        font-size: 100px;
+    }
+    .btnimg img {
+        width: 30px;
+    }
+    .btnimg #btnleft {
+        position: absolute;
+        left: 5%;
+    }
+    .btnimg #btnright {
+        position: absolute;
+        right: 5%;
+    }
+    #textshow {
+        font-size: 18px;
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translate(-50%, -15%);
+    }
+    .anh {
+        width: 70%;
+        height: 32%;
+    }
+    .inputfile input {
+        width: 50%;
+        font-size: 12px;
+    }
+    .inputfile input::before {
+        font-size: 12px;
+        width: 90px;
+        margin-right: -50px;
+    }
+    .content {
+        margin-top: -100px;
+    }
+    .btnimg img {
+        width: 20px;
+    }
+}
