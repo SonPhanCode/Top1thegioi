@@ -96,7 +96,7 @@ inputfile3.addEventListener('change', () => {
 */
 var check = 0;
 var valueKey = 5;
-var time = 15;
+var timecountdown = 15;
 var checkontime = 1;
 // === clean array result
 
@@ -223,7 +223,7 @@ function questions(x) {
     if (checkontime == 1) {
         document.getElementById("cauhoi").style.display = "block";
         document.getElementById("cauhoi").innerText = x;
-        countdown(time);
+        countdown(timecountdown);
         document.getElementById("nhac").play();
     } else {
         alert("Sống chậm lại đi :)");
