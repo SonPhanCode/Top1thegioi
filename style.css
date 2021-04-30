@@ -609,11 +609,11 @@ button:hover {
     }
     .btnimg #btnleft {
         position: absolute;
-        left: 5%;
+        left: 1%;
     }
     .btnimg #btnright {
         position: absolute;
-        right: 5%;
+        right: 1%;
     }
     #textshow {
         font-size: 18px;
