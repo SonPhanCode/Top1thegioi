@@ -45,6 +45,11 @@ body {
     background-position: center;
 }
 
+.left,
+table {
+    z-index: 5;
+}
+
 table {
     float: left;
     margin-left: 50px;
