@@ -40,7 +40,7 @@
         font-size: 100px;
         font-family: 'Courier New', Courier, monospace;
         border: 1px solid gray;
-        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, .2);
         color: yellow;
         font-weight: bold;
         transform: skewX(-20deg);
@@ -48,7 +48,8 @@
     
     .menu button:hover {
         transition: all 0.25s;
-        background-color: white;
+        /* background-color: white; */
+        background-color: rgba(255, 255, 255, .7);
         border-radius: 50px;
         transform: skewX(20deg);
         color: black;
