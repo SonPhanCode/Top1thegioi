@@ -379,6 +379,7 @@ ok.onclick = function() {
         nhacnen.pause();
         document.getElementById("inputfile").style.display = "none";
         document.getElementById("next").style.display = "block";
+        document.getElementById("bongbong").style.zIndex = "4";
 
     } else alert("PASSWORD sai");
 }
