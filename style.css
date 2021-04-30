@@ -81,14 +81,6 @@ button {
     margin-left: 10px;
 }
 
-#bongbong {
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    position: fixed;
-    z-index: 10;
-}
-
 
 /* ===== cau hoi==== */
 
@@ -339,7 +331,16 @@ button:hover {
     transition: all 0.25s;
 }
 
+#bongbong {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    position: fixed;
+    z-index: -1;
+}
+
 .inputfile {
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
